@@ -1,35 +1,15 @@
-import java.util.Scanner;
-
 public class Main {
-    public static void main(String[] args)
-    {
-        Scanner scanner = new Scanner(System.in);
-        Savings savings = new Savings();
+    public static void main(String[] args) {
+        SavingsAccount savings = new SavingsAccount(1000, 0.05);
+        CheckingsAccount checking = new CheckingsAccount(500, 200);
 
-        System.out.println("Enter amount to deposit in savings account");
-        double depositAmount = scanner.nextDouble();
-
-        savings.deposit(depositAmount);
-
-        System.out.println("Enter amount to withdraw from savings account");
-        double withdrawAmount = scanner.nextDouble();
-
-        savings.withdrawl(withdrawAmount);
-
+        savings.deposit(200);
+        savings.withdraw(150);
+        savings.applyInterest();
         savings.displayBalance();
 
-        Checkings checkings = new Checkings();
-
-        System.out.println("Enter amount to deposit in checkings account");
-        depositAmount = scanner.nextDouble();
-
-        checkings.deposit(depositAmount);
-
-        System.out.println("Enter amount to withdraw from checkings account");
-        withdrawAmount = scanner.nextDouble();
-
-        checkings.withdrawl(withdrawAmount);
-
-        checkings.displayBalance();
+        checking.deposit(100);
+        checking.withdraw(700);
+        checking.displayBalance();
     }
 }
