@@ -1,4 +1,4 @@
-public class Savings
+public class Savings extends BankAccount
 {
     double balance = 0.00;
     public void deposit(double amount)

@@ -1,4 +1,4 @@
-public class Checkings
+public class Checkings extends BankAccount
 {
     double balance = 0.00;
     public void deposit(double amount)
