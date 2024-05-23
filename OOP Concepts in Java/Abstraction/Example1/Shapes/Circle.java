@@ -1,6 +1,6 @@
 package Shapes;
 
-public class Circle extends Shape {
+class Circle extends Shape {
 
     static final float PI = 3.14f;
     public float radius;
